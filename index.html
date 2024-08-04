@@ -3,23 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered Image</title>
+    <title>Kanaksan</title>
     <style>
         body {
             margin: 0;
             height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
         }
-        img {
-            width: 8cm;
-            height: 8cm;
+        .image-container {
+            margin-bottom: 20px; /* Space between the image and the text */
+        }
+        .loading-container {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+        }
+        .loading-text {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            font-weight: bold;
+            position: relative;
+        }
+        .loading-text span {
+            display: inline-block;
+            animation: roll 1.5s ease-in-out infinite;
+        }
+        .loading-text span:nth-child(1) { animation-delay: 0s; }
+        .loading-text span:nth-child(2) { animation-delay: 0.1s; }
+        .loading-text span:nth-child(3) { animation-delay: 0.2s; }
+        .loading-text span:nth-child(4) { animation-delay: 0.3s; }
+        .loading-text span:nth-child(5) { animation-delay: 0.4s; }
+        .loading-text span:nth-child(6) { animation-delay: 0.5s; }
+        .loading-text span:nth-child(7) { animation-delay: 0.6s; }
+        .loading-text span:nth-child(8) { animation-delay: 0.7s; }
+        .loading-text span:nth-child(9) { animation-delay: 0.8s; }
+        .loading-text span:nth-child(10) { animation-delay: 0.9s; }
+        @keyframes roll {
+            0% { transform: translateX(-100%); opacity: 0; }
+            50% { transform: translateX(10%); opacity: 1; }
+            100% { transform: translateX(0); opacity: 1; }
         }
     </style>
 </head>
 <body>
-    <img src="logo.jpg" alt="Centered Image">
+    <div class="image-container">
+        <img src="logo.jpg" alt="Kanaksan Loading ..." width="250" height="250">
+    </div>
+    <div class="loading-container">
+        <div class="loading-text">
+            <span>L</span>
+            <span>o</span>
+            <span>a</span>
+            <span>d</span>
+            <span>i</span>
+            <span>n</span>
+            <span>g</span>
+            <span> </span>
+            <span>.</span>
+            <span>.</span>
+            <span>.</span>
+        </div>
+    </div>
 </body>
 </html>
